@@ -10,7 +10,7 @@ public class Main {
     }
 
     public static void main(String[] args){
-        System.out.println("Min (3,6,8,9,6): " + findMinRecursive(new int[]{2, 7, 4, 0, 5}, 0));
+        System.out.println("Min (3,6,8,9,6): " + findMinRecursive(new int[]{3,6,8,9,6}, 0));
 
     }
 }
