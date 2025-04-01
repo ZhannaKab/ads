@@ -1,14 +1,17 @@
-import java.util.Arrays;
+import java.util.Scanner;
 
 public class second {
-    public static double findAverageRecursive(int[] arr, int index, int sum) {
-        if (index == arr.length) {
-            return (double) sum / arr.length;
-        }
-        return findAverageRecursive(arr, index + 1, sum + arr[index]);
+    public static boolean isPrimeRecursive(int n, int divisor) {
+        if (n < 2) return false;
+        if (divisor * divisor > n) return true;
+        if (n % divisor == 0) return false;
+        return isPrimeRecursive(n, divisor + 1);
     }
 
     public static void main(String[] args) {
-        System.out.println("Average (3,4,6,7,5): " + findAverageRecursive(new int[]{3,4,6,7,5}, 0, 0));
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        scanner.close();
+        System.out.println(isPrimeRecursive(n, 2) ? "Prime" : "Composite");
     }
 }
